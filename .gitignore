@@ -4,4 +4,7 @@
 .obsidian/
 cmake-build-debug/
 cmake-build-release/
-.zip/
+*.zip
+*.jou
+*.log
+.Xil/

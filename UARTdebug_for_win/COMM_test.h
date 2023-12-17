@@ -90,7 +90,7 @@ void COMM_test::ReadFromSerialPort(const int &dataNum) {
     char *buffer = new char[dataNum + 1];
 
     if (ReadFile(hSerial, buffer, dataNum + 1, &bytesRead, nullptr)) {
-//        std::cout << buffer << std::endl;
+        std::cout << "Received: " << buffer << std::endl;
 //        std::cout << "Received: " << bytesRead << std::endl;
         delete [] buffer;
     } else {
@@ -109,7 +109,7 @@ void COMM_test::WriteToSerialPort(const int &dataNum) {
     data[dataNum] = '\0';
 
     if (WriteFile(hSerial, data, dataNum + 1, &bytesSend, nullptr)) {
-//        std::cout << "Send: " << data << std::endl;
+        std::cout << "Send: " << data << std::endl;
 //        std::cout << "Send: " << bytesSend << std::endl;
         delete[] data;
     }
@@ -128,8 +128,11 @@ void COMM_test::SpeedTest(const int &n) {
 //    OpenSerialPort();
 
     auto start = std::chrono::high_resolution_clock::now();
-    WriteToSerialPort(dataNum);
-    ReadFromSerialPort(dataNum);
+    for (int i = 0; i < dataNum; ++i) {
+        WriteToSerialPort(1);
+        ReadFromSerialPort(1);
+        Sleep(1000);
+    }
     auto end = std::chrono::high_resolution_clock::now();
     std::cout << "Time to Write and Read "
               << n

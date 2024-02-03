@@ -12,7 +12,7 @@ int main () {
     std::cout << "INPUT(Num of uint16 data):";
     int n;
     std::cin >> n;
-    COMM_test comm_test("COM4", baudRate);
+    COMM_test comm_test("COM3", baudRate);
 //    COMM_test comm_test;
     comm_test.SpeedTest(n);
 

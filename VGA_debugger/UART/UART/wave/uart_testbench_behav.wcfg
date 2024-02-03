@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="566.106 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="295"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/top_tb/uut/data_buffer" type="array">
+      <obj_property name="ElementShortName">data_buffer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_buffer[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/sys_rst_n" type="logic">
+      <obj_property name="ElementShortName">sys_rst_n</obj_property>
+      <obj_property name="ObjectShortName">sys_rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd" type="logic">
+      <obj_property name="ElementShortName">uart_rxd</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_done" type="logic">
+      <obj_property name="ElementShortName">uart_done</obj_property>
+      <obj_property name="ObjectShortName">uart_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/rx_flag" type="logic">
+      <obj_property name="ElementShortName">rx_flag</obj_property>
+      <obj_property name="ObjectShortName">rx_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/rx_cnt" type="array">
+      <obj_property name="ElementShortName">rx_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/rxdata" type="array">
+      <obj_property name="ElementShortName">rxdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rxdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_data" type="array">
+      <obj_property name="ElementShortName">uart_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd_d0" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d0</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd_d1" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d1</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/clk_cnt" type="array">
+      <obj_property name="ElementShortName">clk_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_cnt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/start_flag" type="logic">
+      <obj_property name="ElementShortName">start_flag</obj_property>
+      <obj_property name="ObjectShortName">start_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/CLK_FREQ" type="array">
+      <obj_property name="ElementShortName">CLK_FREQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_FREQ[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/UART_BPS" type="array">
+      <obj_property name="ElementShortName">UART_BPS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UART_BPS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/u_uart_recv/BPS_CNT" type="array">
+      <obj_property name="ElementShortName">BPS_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BPS_CNT[31:0]</obj_property>
+   </wvobject>
+</wave_config>

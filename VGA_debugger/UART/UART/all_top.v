@@ -10,16 +10,21 @@ module all_top(
 
     wire sys_clk;
 
+    parameter SYSTEM_CLK = 200000000;
+    parameter UART_BPS = 9600; // 10000 for debug
+    parameter FIFO_DEPTH = 42;
+    parameter DATA_WIDTH = 32;
+
     clk_diff u_clk_diff(
         .clk200P(CLK_200M_P),
         .clk200N(CLK_200M_N),
         .clk200MHz(sys_clk)
     );
 
-    top #(.CLK_FREQ(200000000),
-        .UART_BPS(9600),
-        .FIFO_DEPTH(42),
-        .DATA_WIDTH(32))
+    top #(.CLK_FREQ(SYSTEM_CLK),
+        .UART_BPS(UART_BPS),
+        .FIFO_DEPTH(FIFO_DEPTH),
+        .DATA_WIDTH(DATA_WIDTH))
     u_top (
         .sys_clk(sys_clk),
         .sys_rst_n(RSTN),

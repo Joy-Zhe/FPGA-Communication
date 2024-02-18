@@ -3,85 +3,308 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="top_tb_behav.wdb" id="1">
+      <db_ref path="all_top_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="all_top_tb" />
             <top_module name="glbl" />
-            <top_module name="top_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="566.106 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,128.908638 us"></ZoomStartTime>
+      <ZoomEndTime time="13,163.908639 us"></ZoomEndTime>
+      <Cursor1Time time="19,900.100000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="295"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <NameColumnWidth column_width="262"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/top_tb/uut/data_buffer" type="array">
-      <obj_property name="ElementShortName">data_buffer[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_buffer[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/sys_clk" type="logic">
+   <WVObjectSize size="55" />
+   <wvobject fp_name="/all_top_tb/uAT/u_top/sys_clk" type="logic">
       <obj_property name="ElementShortName">sys_clk</obj_property>
       <obj_property name="ObjectShortName">sys_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/sys_rst_n" type="logic">
+   <wvobject fp_name="/all_top_tb/uAT/u_top/sys_rst_n" type="logic">
       <obj_property name="ElementShortName">sys_rst_n</obj_property>
       <obj_property name="ObjectShortName">sys_rst_n</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd" type="logic">
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_rxd" type="logic">
       <obj_property name="ElementShortName">uart_rxd</obj_property>
       <obj_property name="ObjectShortName">uart_rxd</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_done" type="logic">
-      <obj_property name="ElementShortName">uart_done</obj_property>
-      <obj_property name="ObjectShortName">uart_done</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_txd" type="logic">
+      <obj_property name="ElementShortName">uart_txd</obj_property>
+      <obj_property name="ObjectShortName">uart_txd</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/rx_flag" type="logic">
-      <obj_property name="ElementShortName">rx_flag</obj_property>
-      <obj_property name="ObjectShortName">rx_flag</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/led_out" type="array">
+      <obj_property name="ElementShortName">led_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_out[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/rx_cnt" type="array">
-      <obj_property name="ElementShortName">rx_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">rx_cnt[3:0]</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_recv_done" type="logic">
+      <obj_property name="ElementShortName">uart_recv_done</obj_property>
+      <obj_property name="ObjectShortName">uart_recv_done</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/rxdata" type="array">
-      <obj_property name="ElementShortName">rxdata[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rxdata[7:0]</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_recv_data" type="array">
+      <obj_property name="ElementShortName">uart_recv_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_recv_data[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_data" type="array">
-      <obj_property name="ElementShortName">uart_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_data[7:0]</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_send_en" type="logic">
+      <obj_property name="ElementShortName">uart_send_en</obj_property>
+      <obj_property name="ObjectShortName">uart_send_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd_d0" type="logic">
-      <obj_property name="ElementShortName">uart_rxd_d0</obj_property>
-      <obj_property name="ObjectShortName">uart_rxd_d0</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_send_data" type="array">
+      <obj_property name="ElementShortName">uart_send_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_send_data[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/uart_rxd_d1" type="logic">
-      <obj_property name="ElementShortName">uart_rxd_d1</obj_property>
-      <obj_property name="ObjectShortName">uart_rxd_d1</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/uart_tx_busy" type="logic">
+      <obj_property name="ElementShortName">uart_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_busy</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/clk_cnt" type="array">
-      <obj_property name="ElementShortName">clk_cnt[15:0]</obj_property>
-      <obj_property name="ObjectShortName">clk_cnt[15:0]</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/new_byte_ready" type="logic">
+      <obj_property name="ElementShortName">new_byte_ready</obj_property>
+      <obj_property name="ObjectShortName">new_byte_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/start_flag" type="logic">
-      <obj_property name="ElementShortName">start_flag</obj_property>
-      <obj_property name="ObjectShortName">start_flag</obj_property>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/byte_count" type="array">
+      <obj_property name="ElementShortName">byte_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_count[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/CLK_FREQ" type="array">
+   <wvobject fp_name="/all_top_tb/uAT/u_top/data_buffer" type="array">
+      <obj_property name="ElementShortName">data_buffer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_buffer[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/data_count" type="array">
+      <obj_property name="ElementShortName">data_count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/CLK_FREQ" type="array">
       <obj_property name="ElementShortName">CLK_FREQ[31:0]</obj_property>
       <obj_property name="ObjectShortName">CLK_FREQ[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/UART_BPS" type="array">
+   <wvobject fp_name="/all_top_tb/uAT/u_top/UART_BPS" type="array">
       <obj_property name="ElementShortName">UART_BPS[31:0]</obj_property>
       <obj_property name="ObjectShortName">UART_BPS[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/uut/u_uart_recv/BPS_CNT" type="array">
+   <wvobject fp_name="/all_top_tb/uAT/u_top/FIFO_DEPTH" type="array">
+      <obj_property name="ElementShortName">FIFO_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFO_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/sys_rst_n" type="logic">
+      <obj_property name="ElementShortName">sys_rst_n</obj_property>
+      <obj_property name="ObjectShortName">sys_rst_n</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_rxd" type="logic">
+      <obj_property name="ElementShortName">uart_rxd</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_done" type="logic">
+      <obj_property name="ElementShortName">uart_done</obj_property>
+      <obj_property name="ObjectShortName">uart_done</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/rx_flag" type="logic">
+      <obj_property name="ElementShortName">rx_flag</obj_property>
+      <obj_property name="ObjectShortName">rx_flag</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/rx_cnt" type="array">
+      <obj_property name="ElementShortName">rx_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_cnt[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_rxd_d0" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d0</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_rxd_d1" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d1</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/test_sig" type="logic">
+      <obj_property name="ElementShortName">test_sig</obj_property>
+      <obj_property name="ObjectShortName">test_sig</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/rxdata" type="array">
+      <obj_property name="ElementShortName">rxdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rxdata[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_data" type="array">
+      <obj_property name="ElementShortName">uart_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_data[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_rxd_d0" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d0</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d0</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/uart_rxd_d1" type="logic">
+      <obj_property name="ElementShortName">uart_rxd_d1</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd_d1</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/clk_cnt" type="array">
+      <obj_property name="ElementShortName">clk_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_cnt[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/start_flag" type="logic">
+      <obj_property name="ElementShortName">start_flag</obj_property>
+      <obj_property name="ObjectShortName">start_flag</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/CLK_FREQ" type="array">
+      <obj_property name="ElementShortName">CLK_FREQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_FREQ[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/UART_BPS" type="array">
+      <obj_property name="ElementShortName">UART_BPS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">UART_BPS[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_uart_recv/BPS_CNT" type="array">
       <obj_property name="ElementShortName">BPS_CNT[31:0]</obj_property>
       <obj_property name="ObjectShortName">BPS_CNT[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/data_count" type="array">
+      <obj_property name="ElementShortName">data_count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/fifo" type="array">
+      <obj_property name="ElementShortName">fifo[42:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo[42:0][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/data_count" type="array">
+      <obj_property name="ElementShortName">data_count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/fifo" type="array">
+      <obj_property name="ElementShortName">fifo[42:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo[42:0][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/wr_ptr" type="array">
+      <obj_property name="ElementShortName">wr_ptr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_ptr[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/rd_ptr" type="array">
+      <obj_property name="ElementShortName">rd_ptr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_ptr[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/COUNT" type="array">
+      <obj_property name="ElementShortName">COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNT[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/all_top_tb/uAT/u_top/u_fifo/ADDR_BTIS" type="array">
+      <obj_property name="ElementShortName">ADDR_BTIS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_BTIS[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

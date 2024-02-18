@@ -71,12 +71,15 @@ module uart_recv(input sys_clk,
         else
             rx_cnt <= 4'd0;
     end
+
+    reg test_sig = 1'b0;
     
     always @(posedge sys_clk or negedge sys_rst_n) begin
         if (!sys_rst_n)
             rxdata <= 8'd0;
         else if (rx_flag)
             if (clk_cnt == BPS_CNT/2) begin
+                test_sig <= 1'b1;
                 case (rx_cnt)
                     4'd1 : rxdata[0] <= uart_rxd_d1;
                     4'd2 : rxdata[1] <= uart_rxd_d1;
@@ -89,8 +92,10 @@ module uart_recv(input sys_clk,
                     default:;
                 endcase
             end
-            else
+            else begin
                 rxdata <= rxdata;
+                test_sig <= 1'b0;
+            end
         else
             rxdata <= 8'd0;
     end

@@ -25,29 +25,27 @@ reg [1:0] byte_count = 0; // 0: 1st byte, 1: 2nd byte, 2: 3rd byte, 3: 4th byte
 reg [31:0] data_buffer;   // reassemble 4 bytes into a 32-bit data
 
 // FIFO
-wire [15:0] din;
+wire [31:0] fifo_din;
 reg wr_en;
-wire rd_en;
-wire [15:0] dout;
-wire full;
-wire empty;
 wire [5:0] data_count;
+wire rd_en = (data_count >= 6'd2) ? 1'b1 : 1'b0;
+wire [31:0] fifo_dout;
 
-// FIFO out
-reg [DATA_WIDTH - 1:0] data_store[FIFO_DEPTH - 1:0];
-reg [5:0] store_ptr = 0;
+reg [63:0] debug_output = 0;
 
-// FIFO state
-reg [1:0] state = 0;
-localparam IDLE = 0, RD_FIFO = 1;
-assign rd_en = (state == RD_FIFO);
+assign fifo_din = data_buffer;
 
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n) begin
         byte_count <= 2'b0;
         data_buffer <= 32'b0;
+        wr_en <= 0;
     end
     else begin
+        if (wr_en) begin // disable write when data_buffer is not ready
+            wr_en <= 0;
+        end
+
         if (uart_recv_done && ~new_byte_ready) begin
             new_byte_ready <= 1; // set new_byte_ready
             case (byte_count)
@@ -65,7 +63,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         else if (!uart_recv_done) begin 
             // no new data but next byte start, wr_en <= 0, ready <= 0, prepare for next byte
             new_byte_ready <= 0;  
-            wr_en <= 0;
+            // wr_en <= 0;
         end
     end
 end
@@ -82,21 +80,19 @@ u_uart_recv(
     .uart_data      (uart_recv_data)
     );
 
-// fifo_generator_0 FIFO(
-//     .clk(clk),                // input wire clk
-//     .srst(srst),              // input wire srst
-//     .din(din),                // input wire [15 : 0] din
-//     .wr_en(wr_en),            // input wire wr_en
-//     .rd_en(rd_en),            // input wire rd_en
-//     .dout(dout),              // output wire [15 : 0] dout
-//     .full(full),              // output wire full
-//     .empty(empty),            // output wire empty
-//     .data_count(data_count)  // output wire [5 : 0] data_count
-// );
+fifo_42 u_fifo (
+  .clk(sys_clk),                // input wire clk
+  .rst_n(sys_rst_n),            // input wire rst_n
+  .din(fifo_din),               // input wire [31 : 0] din
+  .wr_en(wr_en),                // input wire wr_en
+  .rd_en(rd_en),                // input wire rd_en
+  .dout(fifo_dout),             // output wire [31 : 0] dout
+  .data_count(data_count)       // output wire [5 : 0] data_count
+);
 
 uart_send #(                          
     .CLK_FREQ       (CLK_FREQ),         
-    .UART_BPS       (UART_BPS))         
+    .UART_BPS       (UART_BPS))
 u_uart_send(                 
     .sys_clk        (sys_clk),
     .sys_rst_n      (sys_rst_n),
